@@ -1,0 +1,64 @@
+.bodyTitle {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    color: white;
+}
+
+.bodyHeader {
+    color: var(--white);
+    margin: 15% 20px 15% 0;
+    background-color: rgba(0,0,0,0.8);
+    padding: var(--outer_padding);
+    max-width: 500px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top: 0.5px solid rgba(90,90,90,0.6);
+    border-right: 0.5px solid rgba(90,90,90,0.6);
+    border-bottom: 0.5px solid rgba(90,90,90,0.6);
+}
+
+.bodyHeader p, .bodyHeader span {
+    margin: 0;
+    color: var(--mid_grey);
+}
+
+@media only screen and (max-width: 650px) {
+    .bodyHeader .bodyTitle {
+        font-size: 1.5em;
+    }
+
+    .bodyHeader span {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .bodyHeader .bodyTitle {
+        font-size: 1.2em;
+    }
+
+    .bodyHeader span {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .bodyHeader {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .bodyHeader {
+        margin-top: 40%;
+        margin-bottom: 40%;
+        border: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bodyHeader .bodyTitle {
+        font-size: 1.4em;
+    }
+}

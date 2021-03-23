@@ -1,0 +1,134 @@
+.horizontalMenu {
+    padding: 0px var(--outer_padding) 7px var(--outer_padding);
+    color: white;
+    font-size: 0.9em;
+}
+
+.horizontalMenu ul {
+    margin: 0;
+    padding: 1px;
+}
+
+.horizontalMenu li {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 3%;
+}
+
+.horizontalMenu a {
+    color: white;
+}
+
+.horizontalMenu a:hover {
+    color: var(--light_blue);
+}
+
+/*desktop visibility*/
+
+#headerNav {
+    display: block;
+}
+
+#extraNav {
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    #headerNav {
+        display: none;
+    }
+
+    #extraNav {
+        display: block;
+    }
+
+    #sideIcons {
+        display: none !important;
+    }
+}
+
+/*visibility*/
+
+#mobileMenu {
+    display: none;
+}
+
+#mobileMenuContent {
+    display: none;
+}
+
+/*end visibility */
+
+#headerNav div {
+    width: 100%;
+}
+
+#headerNav li li {
+    display: block;
+}
+
+#siteHeader .sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    padding: 20px 5px 0 5px;
+    transition: max-height 0.5s ease-in-out;
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    z-index: 5;
+}
+
+#siteHeader .sub-menu li {
+    background-color: rgba(0,0,0,0.8);
+    margin: 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+#siteHeader .sub-menu li:first-of-type {
+    padding-top: 15px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+#siteHeader .sub-menu li:last-of-type {
+    padding-bottom: 15px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#siteHeader .menu-item-has-children:hover ul {
+    max-height: 500px;
+}
+
+/*media queries*/
+
+@media only screen and (max-width: 850px) {
+    #headerNav {
+        position: relative;
+    }
+
+    #headerNav li {
+        font-size: 1.2em;
+        display: block;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid var(--dark_grey);
+    }
+
+    #headerNav li:last-of-type {
+        border-bottom: none;
+    }
+
+    #siteHeader .sub-menu {
+        max-height: 1000px;
+        overflow: visible;
+        position: static;
+        background-color: rgba(0,0,0,0);
+    }
+
+    #headerNav .sub-menu li {
+        border-bottom: none;
+        background-color: transparent;
+    }
+}

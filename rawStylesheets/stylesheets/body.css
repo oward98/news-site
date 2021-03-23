@@ -1,0 +1,124 @@
+#mainArea {
+    background-color: var(--white);
+    padding: 0 var(--outer_padding);
+    min-height: 100vh;
+}
+
+.maxWidth {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#homepageMain section {
+    border-bottom: 1px solid var(--dark_grey);
+    padding-bottom: 20px;
+    
+}
+
+figure {
+    border-radius: var(--radius);
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-size: .8em;
+    font-weight: 300;
+}
+
+/*overriding gutenberg defaults*/
+
+.wp-block-image {
+    margin: 1em 0;
+}
+
+.wp-block-image figcaption {
+    margin: 5px 0 !important;
+}
+
+/*Page Preview Banners*/
+
+
+
+/*END PREVIEWS*/
+
+.dark {
+    background-color: var(--very_dark_grey);
+    color: var(--light_grey);
+}
+
+.bordered {
+    border: 1px solid var(--mid_grey);
+    border-radius: var(--radius);
+}
+
+.padded {
+    padding: 10px;
+}
+
+ul.spaced {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.spaced li {
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+
+ul.spaced li:first-of-type {
+    margin-left: 0;
+}
+
+ul.spaced li:last-of-type {
+    margin-right: 0;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.verticalFlex {
+    display: flex;
+    flex-flow: column;
+}
+
+hr.wp-block-separator {
+    border-top: none !important;
+    border-bottom: 1px solid var(--very_light_grey) !important;
+}
+
+.gutterFlex {
+    --gutter_width: var(--outer_padding);
+    margin-left: calc(var(--gutter_width) - 2*var(--gutter_width));
+    margin-right: calc(var(--gutter_width) - 2*var(--gutter_width));
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gutterFlex > * {
+    margin-left: var(--gutter_width);
+    margin-right: var(--gutter_width);
+}
+
+#pageContent .wp-block-image {
+    margin: 30px 0;
+    max-width: 600px;
+}
+
+#pageContent .wp-block-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pageContent .wp-block-image.alignfull {
+    max-width: 100%; 
+}

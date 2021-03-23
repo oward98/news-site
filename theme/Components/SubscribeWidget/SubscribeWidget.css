@@ -1,0 +1,61 @@
+#header-widget-container {
+    --subscription_font_size: 0.9em; 
+    --subscription_form_height: 27px;
+    height: 100%;
+    align-items: center;
+    margin: 20px;
+}
+
+#header-widget-container p {
+    margin: 0;
+    height: 100%;
+}
+
+#header-widget-container form {
+    display: flex;
+    height: var(--subscription_form_height);
+}
+
+#header-widget-container input {
+    font-size: var(--subscription_font_size);
+    transition: background-color 0.5s ease-in-out;
+    background-color: var(--mid_grey);
+    color: var(--light_grey);
+    border-style: none;
+    border-width: 0;
+    border-radius: var(--radius);
+    height: 100%;
+    box-sizing: border-box; 
+}
+
+#header-widget-container button {
+    transition: background-color 0.5s ease-in-out;
+    font-size: var(--subscription_font_size);
+    height: 100%;
+    border-style: none;
+    border-width: 0;
+    border-radius: var(--radius);
+    padding: 1px 10px;
+    background-color: var(--dark_grey);
+    color: var(--light_grey);
+}
+
+#header-widget-container input:focus,  #header-widget input:hover {
+    background-color: var(--dark_grey);
+    outline: none;
+}
+
+#header-widget-container button:hover {
+    background-color: var(--very_dark_grey);
+}
+
+#header-widget-container input::placeholder {
+   color: var(--light_grey);
+}
+
+@media only screen and (max-width: 850px) {
+    #header-widget-container {
+        display: none;
+    }
+}
+

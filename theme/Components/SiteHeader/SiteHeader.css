@@ -1,0 +1,47 @@
+#siteHeader {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/*sets height of logo*/
+#siteHeader h1 {
+    display: flex;
+    align-items: center;
+    height: 65px;
+}
+
+#siteHeader h1 a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.custom-logo {
+    height: 100%;
+    width: auto;
+}
+
+#topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px var(--outer_padding) 15px var(--outer_padding);
+}
+
+#topBar h1 {
+    margin: 0;
+}
+
+#topBar h2 {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    #siteHeader h1 {
+        width: 70px;
+        overflow: hidden;
+    }
+}

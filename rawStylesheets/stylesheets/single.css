@@ -1,0 +1,102 @@
+#postMain {
+    --main-top-padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1500px;
+    padding: var(--main-top-padding) 0 50px 0;
+    border-bottom: 1px solid var(--light_grey);
+    margin: 0 auto;
+}
+
+#postContent {
+    align-self: end;
+    flex-basis: 500px;
+    flex-grow: 10;
+    max-width: 600px;
+    overflow: hidden;
+    color: rgb(34, 34, 34);
+    padding: var(--main-top-padding) 40px 20px 0px;
+    margin-top: calc(var(--main-top-padding) - 2*var(--main-top-padding));
+}
+
+#postContent h2, #postContent h3, #postContent h4 {
+    color: var(--very_dark_grey);
+}
+
+#postMain .pageThumbnailContainer {
+    height: 150px;
+}
+
+#postContent p:first-of-type {
+    margin-top: 0;
+}
+
+#infoSidebar {
+    padding-left: 0px;
+    margin-top: -20px;
+    padding-top: 20px;
+    margin-left: var(--gutter-width);
+    margin-right: var(--gutter-width);
+    min-width: 200px;
+    flex: 0 0 100px;
+}
+
+#postContent hr.wp-block-separator {
+    margin-right: -36px;
+    margin-left: -8px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #postContent {
+        padding-left: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #postContent .wp-block-image {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    #postContent p {
+        font-size: 0.95em;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #postContent {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #postContent .wp-block-image {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #postContent p {
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 0.9em;
+    }
+
+    #postContent h1, #postContent h2, #postContent h3, #postContent h4, #postContent h5, #postContent h6 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    #postContent .wp-block-image {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+        z-index: 2;
+    }
+}

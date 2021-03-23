@@ -1,0 +1,116 @@
+footer {
+    background-color:var(--very_dark_grey);
+    color: var(--light_grey);
+    font-weight: 300;
+}
+
+footer h2 {
+    font-size: 1.2em;
+    color: var(--white);
+    margin-top: 0;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer a:hover {
+    color: var(--mid_grey);
+}
+
+#about {
+    font-weight: 300;
+    padding: 40px var(--outer_padding);
+    border-bottom: none;
+    background-color: rgba(0,0,0, 0.7);
+}
+
+ul#footerCommitteeLinks {
+    padding: 0;
+    margin: 0;
+}
+
+#footerCommitteeLinks li {
+    padding: 0;
+    margin-right: 20px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+#footerCommitteeLinks a {
+    color: var(--white);
+    font-size: 1.2em;
+}
+
+#footerCommitteeLinks a:hover {
+    color: var(--light_grey);
+}
+
+#footerNav a {
+    font-size: 1.1em;
+    margin-bottom: 9px;
+    display: block;
+}
+
+#bottomInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: black;
+    color: var(--mid_grey);
+}
+
+#leftBottomInfo {
+    margin: 0;
+    display: inline-block;
+}
+
+#rightBottomInfo {
+    margin: 0;
+    display: inline-block;
+}
+
+#rightBottomInfo a{
+    color: var(--mid_grey);
+}
+
+#rightBottomInfo a:hover {
+    color: var(--light_grey);
+}
+
+#footerNav {
+    border-bottom: none;
+    padding: 10px 0;
+    padding: 20px;
+    background-color: rgba(0,0,0, 0.8);
+    box-shadow: 5px 5px black;
+    z-index: 2;
+}
+
+#menu-footer-menu {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#menu-footer-menu li {
+    list-style-type: none;
+    padding: 0;
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 175px;
+}
+
+#menu-footer-menu .sub-menu {
+    margin-top: 1px;
+    padding: 0;
+}
+
+#footerNav .sub-menu a {
+    font-size: 0.9em;
+}

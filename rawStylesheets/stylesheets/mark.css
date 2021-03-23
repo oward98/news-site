@@ -1,0 +1,35 @@
+mark.highThreat {
+    color: rgb(168, 13, 13);
+    background-color: transparent;
+}
+
+mark.mediumThreat { 
+    color: rgb(187, 98, 25);
+    background-color: transparent;
+}
+
+mark.lowThreat {
+    color: rgb(20, 128, 20);
+    background-color: transparent;
+}
+
+mark.exceptionalSignificance {
+    color: rgb(182, 158, 24);
+    background-color: transparent;
+}
+
+mark.highSignificance {
+    color: rgb(252, 215, 9);
+    background-color: transparent;
+}
+
+mark.mediumSignificance {
+    color: rgb(136, 120, 15);
+    background-color: transparent;
+}
+
+mark.lowSignificance {
+    color: rgb(114, 82, 12);
+    background-color: transparent;
+}
+

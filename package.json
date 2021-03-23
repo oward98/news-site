@@ -1,0 +1,23 @@
+{
+  "name": "newssite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "node gulpfile.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.9",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "postcss": "^8.2.8",
+    "postcss-import": "^14.0.0",
+    "postcss-preset-env": "^6.7.0"
+  }
+}

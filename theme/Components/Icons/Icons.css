@@ -1,0 +1,41 @@
+#sideIcons {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px var(--outer_padding);
+}
+
+#sideIcons button {
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    border:none;
+    opacity: 0.8;
+    transition: opacity 0.25s ease-in-out;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#sideIcons button:focus {
+    outline: none;
+    border: none;
+    opacity: 1;
+}
+
+#sideIcons button:hover {
+    opacity: 1;
+}
+
+#sideIcons span {
+    color: white;
+    display: block;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+#sideIcons img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}

@@ -1,0 +1,32 @@
+#homepageMain #featured {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+#clientSection {
+    border-bottom: none;
+    padding: 0;
+}
+
+#resources .pageThumbnailContainer {
+    height: 200px;
+}
+
+#homepageContent section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--light_grey);
+}
+
+#homepageContent {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .pageBanner .pagePreview {
+        min-width: 360px;
+        max-width: 10000px;
+        margin-bottom: 40px;
+    }
+}

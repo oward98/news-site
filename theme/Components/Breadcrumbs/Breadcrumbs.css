@@ -1,0 +1,47 @@
+#breadcrumbs {
+    padding: 15px var(--outer_padding);
+    background-color: black;
+    opacity: 0.7;
+}
+
+#breadcrumbsList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#breadcrumbsList a {
+    color: rgb(187, 215, 216);
+}
+
+#breadcrumbsList a:hover {
+    color: white;
+}
+
+#breadcrumbsList li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+
+#breadcrumbsList li::after {
+    content: "\203A";
+    margin-left: 10px;
+}
+
+#breadcrumbsList li:last-child:after {
+    content: "";
+}
+
+@media only screen and (max-width: 900px) {
+    #breadcrumbsList li {
+        font-size: 1.0em;
+        margin-right: 6px;
+    }
+
+    #breadcrumbsList li::after {
+        margin-left: 6px;
+    }
+}

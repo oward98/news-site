@@ -1,0 +1,118 @@
+html {
+    --light_blue: #6a97a8;
+    --dark_blue: #1c617a;
+    --turqoise: rgb(3, 44, 39);
+    --white: white;
+    --very_light_grey: rgb(217, 220, 221);
+    --light_grey: #bdbdbd;
+    --mid_grey: #8f8f8f;
+    --dark_grey: rgb(62, 62, 63);
+    --very_dark_grey: #131613;
+    --radius: 2px;
+    --font: 'Times';
+    --outer_padding: 20px;
+    background-color: black;
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+body {
+    width: 100%;
+    font-family: var(--font);
+    margin: 0 auto;
+    color: var(--very_dark_grey);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input, button {
+    font-family: var(--font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--very_dark_grey);
+    font-weight: 500;
+}
+
+article p,
+article a,
+article span,
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+article h2 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.5em
+}
+
+article h3 {
+    font-size: 1.25em;
+    margin-bottom: 12px;
+}
+
+article p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+article {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+a {
+    color: var(--light_blue);
+    text-decoration: none;
+    opacity: 0.95;
+    transition: opacity 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+img {
+    object-fit: cover;
+}
+
+a:hover, a:focus {
+    color: var(--dark_blue);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/*WP Jetpack Share buttons*/
+.sd-title {
+    display: none !important;
+}
+
+.sd-sharing {
+    margin-bottom: 0 !important;
+}
+
+.sharedaddy {
+    border-top: 1px solid var(--very_light_grey);
+    padding-top: 25px;
+    margin-right: -35px;
+    padding-right: 35px;
+}
+
+@media only screen and (max-width: 380px) {
+    html {
+        --outer_padding: 12px; 
+    }
+}

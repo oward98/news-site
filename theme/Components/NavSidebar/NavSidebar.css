@@ -1,0 +1,60 @@
+#navSidebar {
+    flex-grow: 1;
+    flex-basis: auto;
+    position: sticky;
+    top: 0;
+    align-self: flex-end;
+    padding-top: 20px;
+}
+
+#navSidebarHeader {
+    display: block;
+    padding-bottom: 15px;
+    font-size: 1.2em;
+}
+
+#navSidebarHeader a {
+    color: var(--turqoise);
+}
+
+#navSidebarHeader a:hover {
+    color: var(--dark_blue);
+}
+
+#navSidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#navSidebar > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}
+
+#navSidebar > ul > li {
+    border-bottom: 1px solid var(--light_grey);
+}
+
+#navSidebar li {
+    padding: 9px 3px;
+    margin: 0px -3px;
+    font-size: 1.1em;
+}
+
+#navSidebar li li {
+    padding: 4px 0;
+    font-size: 0.9em;
+}
+
+#navSidebar > ul > li:first-of-type {
+    margin-top: 0;
+}
+
+#navSidebar > ul > li:last-of-type {
+    margin-bottom: 0;
+}
+
+#navSidebar ul ul {
+    margin-left: 15px;
+}
