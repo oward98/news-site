@@ -15,7 +15,7 @@ window.onscroll = function() {
 var menuContent = document.getElementById('headerNav');
 
 function showMenu() {
-    menuContent.style.display = 'block';
+    menuContent.style.display = 'flex';
 }
 
 function hideMenu() {

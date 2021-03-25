@@ -77,7 +77,7 @@ const addCSSHeader = () => {
         .pipe(dest('./processedStylesheets'))
     )
 }
-/*
+
 const copyCSSToTheme = () => {
     return (
         src('./processedStylesheets/4final.css')
@@ -85,7 +85,7 @@ const copyCSSToTheme = () => {
         .pipe(dest('./theme'))
     )
 }
-*/
+
 
 const updateEverything = () => {
     //extract css and js for each component, to put into 'components.css'
@@ -95,10 +95,9 @@ const updateEverything = () => {
     //all stylesheets end up in this file due to above, so when it changes, begin the final optimisations
     watch('./rawStylesheets/style.css', series(combineCSS, minifyCSS, transpileCSS, addCSSHeader, copyCSSToTheme));
     
-    //watch('./**/*', series(() => dirSync('/Users/hannahkhalique-brown/Desktop/SHEN/DEV/bloomsbury/theme', '/Users/hannahkhalique-brown/Sites/BCAAC/wp-content/themes/bloomsburyLink', {
+    //watch('./**/*', series(() => dirSync('/Users/hannahkhalique-brown/Desktop/SHEN/DEV/newsSite/theme', '/Users/hannahkhalique-brown/Sites/holbornTimes/wp-content/themes/holbornTimes', {
     //    watch: true
     //} )))
-    
 }
 
 exports.default = updateEverything;

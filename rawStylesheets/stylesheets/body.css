@@ -1,7 +1,28 @@
+.outer {
+    max-width: 1600px;
+    padding-left: var(--outer_padding);
+    padding-right: var(--outer_padding);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.verticalOuter {
+    padding-top: var(--outer_padding);
+    padding-bottom: var(--outer_padding);
+}
+
+.flex {
+    display: flex;
+}
+
+.lineDiv {
+    height: 10px;
+    border-top: 1px solid var(--light_grey);
+}
+
 #mainArea {
     background-color: var(--white);
-    padding: 0 var(--outer_padding);
-    min-height: 100vh;
+    padding-bottom: 40px;
 }
 
 .maxWidth {

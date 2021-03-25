@@ -1,9 +1,4 @@
 <?php get_header() ?>
-
-    <header class='bodyHeader'>
-        <h2 class='bodyTitle'>News</h2>
-    </header>
-    </div>
     <div id='mainArea' class='newsPage'>
     <section id='newsPosts' class='pageBanner'>
     <?php

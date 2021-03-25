@@ -13,10 +13,7 @@ get_header()
             the_post();
             $pageID = get_the_id();
             ?>
-            <?= BodyHeader() ?>
-            <?= Breadcrumbs() ?>
-            </div>
-            <div id='mainArea'>
+            <div id='mainArea' class='outer'>
                 <section id='pageMain'>
                         <aside id='navSidebar'>
                                 <?= NavSidebar() ?>

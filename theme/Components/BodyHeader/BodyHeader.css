@@ -1,20 +1,31 @@
 .bodyTitle {
     margin: 0 0 10px 0;
     font-size: 2em;
+}
+
+.hasBackgroundImage .bodyTitle {
     color: white;
 }
 
 .bodyHeader {
-    color: var(--white);
-    margin: 15% 20px 15% 0;
-    background-color: rgba(0,0,0,0.8);
     padding: var(--outer_padding);
+    background-color: white;
+    color: black;
+}
+
+.bodyHeader.noBackgroundImage {
+    border-bottom: 1px solid var(--light_grey);
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+
+.bodyHeader.hasBackgroundImage {
+    margin: 15% 20px 15% 0;
     max-width: 500px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    border-top: 0.5px solid rgba(90,90,90,0.6);
-    border-right: 0.5px solid rgba(90,90,90,0.6);
-    border-bottom: 0.5px solid rgba(90,90,90,0.6);
+    color: var(--white);
+    background-color: rgba(0,0,0,0.8);
 }
 
 .bodyHeader p, .bodyHeader span {

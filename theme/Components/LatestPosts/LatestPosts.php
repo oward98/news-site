@@ -1,8 +1,9 @@
 <?php
 
 function LatestPosts($numOfPosts) {
-    $latest_posts = get_posts(array('numberposts' => $numOfPosts));
-    foreach($latest_posts as $post) {
+    $post_args = array('meta_key' => '_thumbnail_id', 'numberposts' => $numOfPosts);
+    $latest_posts_with_images = get_posts($post_args);
+    foreach($latest_posts_with_images as $post) {
         $ID = $post->ID;
 
         $title = $post->post_title;

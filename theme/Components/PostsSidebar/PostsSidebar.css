@@ -44,7 +44,6 @@
         margin-left: 0;
         margin-right: 0;
         display: flex;
-        flex-basis: 500px;
         flex-grow: 1;
         flex-wrap: wrap;
         margin-top: 20px;
@@ -56,6 +55,13 @@
         flex-grow: 1;
         flex-shrink: 1;
         margin: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    #postsSidebar {
+        flex-shrink: 1;
     }
 
 }

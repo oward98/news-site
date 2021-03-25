@@ -1,33 +1,33 @@
 <?php
 
 function InfoSidebar() {
-    $conservationAreas = array (
+    $neighbourhoods = array (
         'bloomsbury',
-        'charlotteStreet',
+        'fitzrovia',
+        'kingsCross',
+        'coventGarden',
+        'holborn',
         'denmarkStreet',
-        'fitzroySquare',
-        'hanwayStreet',
-        'kingsway',
-        'sevenDials'
+        'hattonGarden'
     );
 
-    $conservationAreasPrettified = array (
+    $neighbourhoodsPrettified = array (
         'bloomsbury' => 'Bloomsbury',
-        'charlotteStreet' => 'Charlotte Street',
+        'fitzrovia' => 'Fitzrovia',
+        'kingsCross' => "King's Cross",
+        'coventGarden' => 'Covent Garden',
+        'holborn' => 'Holborn',
         'denmarkStreet' => 'Denmark Street',
-        'fitzroySquare' => 'Fitzroy Square',
-        'hanwayStreet' => 'Hanway Street',
-        'kingsway' => 'Kingsway',
-        'sevenDials' => 'Seven Dials'
+        'hattonGarden' => 'Hatton Garden'
     );
 
-    $conservationAreasAffected = array();
+    $neighbourhoodsAffected = array();
 
     $post_id = get_the_id();
 
-    foreach($conservationAreas as $conservationArea) {
-        if (get_post_meta( $post_id, $conservationArea, true ) === 'true') {
-            array_push($conservationAreasAffected, $conservationAreasPrettified[$conservationArea]);
+    foreach($neighbourhoods as $neighbourhood) {
+        if (get_post_meta( $post_id, $neighbourhood, true ) === 'true') {
+            array_push($neighbourhoodsAffected, $neighbourhoodsPrettified[$neighbourhood]);
         }
     };
 
@@ -35,9 +35,9 @@ function InfoSidebar() {
     <ul>
         <li><?=get_the_date()?>
         <li>
-            <h1>Conservation Areas</h1>
+            <h1>Neighbourhoods</h1>
             <ul>
-                <?php foreach($conservationAreasAffected as $conservationArea) echo "<li>$conservationArea</li>" ?>
+                <?php foreach($neighbourhoodsAffected as $neighbourhood) echo "<li>$neighbourhood</li>" ?>
             </ul>
         </li>
     </ul>

@@ -1,23 +1,24 @@
 <?php
 require get_template_directory() . '/Components/HeaderNav/HeaderNav.php';
-require get_template_directory() . '/Components/HeaderNavMobile/HeaderNavMobile.php';
 require get_template_directory() . '/Components/SubscribeWidget/SubscribeWidget.php';
 require get_template_directory() . '/Components/Icons/Icons.php';
 
 function SiteHeader() {
+    $url = has_post_thumbnail();
+
     ?>
-    <header id='siteHeader'>
-        <div id='topBar'>
-            <h1>
-                <?= get_custom_logo(); ?>
-            </h1>
-            <div id='headerButtons'>
-                <?php SubscribeWidget() ?>
-                <?=HeaderNavMobile()?>
+    <header id='siteHeader' class=<?= $url ? '' : 'noBackgroundHeader' ?>>
+        <div id ='headerContainer' class='outer verticalOuter flex'>
+            <div id='topBar'>
+                <h1>
+                    <?= get_custom_logo(); ?>
+                </h1>
+                <div id='headerButtons'>
+                    <?php SubscribeWidget() ?>
+                </div>
             </div>
-            <?=Icons()?>
+            <?=HeaderNav()?>
         </div>
-        <?=HeaderNav()?>
     </header>
     <?php
 }

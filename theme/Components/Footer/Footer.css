@@ -114,3 +114,33 @@ ul#footerCommitteeLinks {
 #footerNav .sub-menu a {
     font-size: 0.9em;
 }
+
+#latestFooterPosts {
+    display: flex;
+}
+
+#latestFooterPosts .pagePreview h3 {
+    color: white;
+}
+
+#latestFooterPosts .pagePreview {
+    color: rgb(202, 199, 199);
+}
+
+#about .custom-logo {
+    max-width: 300px;
+    object-fit: cover;
+    height: auto;
+}
+
+@media only screen and (max-width: 400px) {
+    #about .custom-logo {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+}

@@ -1,15 +1,28 @@
 #siteHeader {
+    background-color: rgba(0,0,0,0.7);
+}
+
+#siteHeader .maxWidth {
     display: flex;
     flex-flow: column;
     align-content: center;
-    background-color: rgba(0,0,0,0.7);
+    padding: 20px var(--outer_padding) 15px var(--outer_padding);
+
+}
+
+#siteHeader.noBackgroundHeader {
+    background-color: black;
+}
+
+#headerContainer {
+    flex-wrap: wrap;
 }
 
 /*sets height of logo*/
 #siteHeader h1 {
     display: flex;
     align-items: center;
-    height: 65px;
+    height: 30px;
 }
 
 #siteHeader h1 a {
@@ -28,7 +41,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px var(--outer_padding) 15px var(--outer_padding);
+    margin-right: auto;
 }
 
 #topBar h1 {
@@ -40,8 +53,30 @@
 }
 
 @media only screen and (max-width: 500px) {
-    #siteHeader h1 {
-        width: 70px;
-        overflow: hidden;
+    #headerContainer {
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #topBar {
+        width: 100%;
+    }
+
+    #topBar h1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .custom-logo {
+        width: 100%;
+        height: auto;
+    }
+
+    #siteHeader h1 a {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
     }
 }

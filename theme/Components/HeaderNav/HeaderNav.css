@@ -1,5 +1,5 @@
 .horizontalMenu {
-    padding: 0px var(--outer_padding) 7px var(--outer_padding);
+    margin-top: 10px;
     color: white;
     font-size: 0.9em;
 }
@@ -7,13 +7,15 @@
 .horizontalMenu ul {
     margin: 0;
     padding: 1px;
+    display: flex;
 }
 
 .horizontalMenu li {
     list-style-type: none;
     text-decoration: none;
     display: inline-block;
-    margin-right: 3%;
+    margin-right: 30px;
+    font-size: 1.1em;
 }
 
 .horizontalMenu a {
@@ -27,26 +29,17 @@
 /*desktop visibility*/
 
 #headerNav {
-    display: block;
+    display: flex;
+
+    margin-left: 40px;
+    margin-top: 0;
+    align-items: center;
 }
 
 #extraNav {
     display: none;
 }
 
-@media only screen and (max-width: 850px) {
-    #headerNav {
-        display: none;
-    }
-
-    #extraNav {
-        display: block;
-    }
-
-    #sideIcons {
-        display: none !important;
-    }
-}
 
 /*visibility*/
 
@@ -103,32 +96,19 @@
 
 /*media queries*/
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 500px) {
     #headerNav {
-        position: relative;
+        min-width: 80%;
+        margin-left: 0;
+        margin-top: 10px;
     }
+}
 
-    #headerNav li {
-        font-size: 1.2em;
-        display: block;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        border-bottom: 1px solid var(--dark_grey);
-    }
-
-    #headerNav li:last-of-type {
-        border-bottom: none;
-    }
-
-    #siteHeader .sub-menu {
-        max-height: 1000px;
-        overflow: visible;
-        position: static;
-        background-color: rgba(0,0,0,0);
-    }
-
-    #headerNav .sub-menu li {
-        border-bottom: none;
-        background-color: transparent;
+@media only screen and (max-width: 400px) {
+    #headerNav {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 0;
     }
 }
