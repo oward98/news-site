@@ -1,6 +1,6 @@
 <?php
 
-function configure_logo() {
+function configureLogo() {
     $defaults = array(
         'height' => 400,
         'width' => 400,
@@ -10,9 +10,9 @@ function configure_logo() {
     add_theme_support('custom-logo', $defaults);
 }
 
-function declare_support() {
+function declareSupport() {
     /*logo set up*/
-    configure_logo();
+    configureLogo();
     /*excerpts for top of page summary and SEO*/
     add_post_type_support('page', 'excerpt');
     /*'featured images' for pages and posts*/
@@ -21,10 +21,10 @@ function declare_support() {
     add_theme_support('align-wide');
 };
 
-function allow_svg_uploads($mimes) {
+function allowSvgUploads($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 }
 
-add_action('after_setup_theme', 'declare_support');
-add_filter('upload_mimes', 'allow_svg_uploads');
+add_action('after_setup_theme', 'declareSupport');
+add_filter('upload_mimes', 'allowSvgUploads');

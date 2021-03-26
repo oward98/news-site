@@ -1,7 +1,7 @@
 <?php
 
-require get_template_directory() . '/Components/LatestPosts/LatestPosts.php';
-require get_template_directory() . '/Components/HomePage/BigNews/BigNews.php';
+require getComponentPath('LatestPosts');
+require 'BigNews/BigNews.php';
 
 function get_news($type) {
     $posts_array = array();
@@ -13,7 +13,6 @@ function get_news($type) {
     };
     return $posts_array;
 };
-
 
 function HomePage() {
     ?>

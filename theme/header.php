@@ -1,7 +1,9 @@
 <?php
-require get_template_directory() . '/Components/SiteHeader/SiteHeader.php';
-require get_template_directory() . '/Components/Head/Head.php';
-//require get_template_directory() . '/Components/Breadcrumbs/Breadcrumbs.php';
+
+require getComponentPath('SiteHeader');
+require getComponentPath('Head');
+require getComponentPath('Breadcrumbs');
+
 ?>
 
 <!DOCTYPE html>

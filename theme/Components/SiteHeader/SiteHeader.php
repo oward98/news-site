@@ -1,7 +1,8 @@
 <?php
-require get_template_directory() . '/Components/HeaderNav/HeaderNav.php';
-require get_template_directory() . '/Components/SubscribeWidget/SubscribeWidget.php';
-require get_template_directory() . '/Components/Icons/Icons.php';
+
+require getComponentPath('HeaderNav');
+require getComponentPath('SubscribeWidget');
+require getComponentPath('Icons');
 
 function SiteHeader() {
     $url = has_post_thumbnail();

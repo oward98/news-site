@@ -1,5 +1,6 @@
 <?php
-require get_template_directory() . '/Components/HomePage/HomePage.php';
+
+require getComponentPath('HomePage');
 
 get_header(); 
 echo HomePage();

@@ -1,6 +1,6 @@
 <?php
 
-require get_template_directory() . '/Components/Footer/Footer.php';
+require getComponentPath('Footer');
 
 ?>  
         <?= Footer() ?>

@@ -391,7 +391,21 @@ mark.lowSignificance {
 #afterArticle h2 {
     margin-bottom: 0;
 }
+#latestSnippets {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 #latestSnippetsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+#relatedPosts {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#relatedPostsContainer {
     display: flex;
     flex-wrap: wrap;
     margin-left: -10px;

@@ -1,8 +1,7 @@
 <?php 
 
-require get_template_directory() . '/Components/Breadcrumbs/Breadcrumbs.php';
-require get_template_directory() . '/Components/NavSidebar/NavSidebar.php';
-require get_template_directory() . '/Components/BodyHeader/BodyHeader.php';
+require getComponentPath('NavSidebar');
+require getComponentPath('BodyHeader');
 
 get_header() 
 

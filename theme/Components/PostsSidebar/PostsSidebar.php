@@ -1,6 +1,7 @@
 <?php
 
-require get_template_directory() . '/Components/LatestPosts/LatestPosts.php';
+require getComponentPath('LatestPosts');
+
 
 function PostsSidebar($numOfPosts) {
     ?>
