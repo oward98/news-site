@@ -8,7 +8,7 @@
 }
 
 .bodyHeader {
-    padding: var(--outer_padding);
+    padding: 20px 20px 20px var(--outer_padding);
     background-color: white;
     color: black;
 }
@@ -20,7 +20,7 @@
 }
 
 .bodyHeader.hasBackgroundImage {
-    margin: 15% 20px 15% 0;
+    margin: 15% var(--outer_padding) 15% 0;
     max-width: 500px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
@@ -71,53 +71,6 @@
 
     .bodyHeader .bodyTitle {
         font-size: 1.4em;
-    }
-}
-#breadcrumbs {
-    padding: 15px var(--outer_padding);
-    background-color: black;
-    opacity: 0.7;
-}
-
-#breadcrumbsList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    color: white;
-}
-
-#breadcrumbsList a {
-    color: rgb(187, 215, 216);
-}
-
-#breadcrumbsList a:hover {
-    color: white;
-}
-
-#breadcrumbsList li {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 1.1em;
-    white-space: nowrap;
-}
-
-#breadcrumbsList li::after {
-    content: "\203A";
-    margin-left: 10px;
-}
-
-#breadcrumbsList li:last-child:after {
-    content: "";
-}
-
-@media only screen and (max-width: 900px) {
-    #breadcrumbsList li {
-        font-size: 1.0em;
-        margin-right: 6px;
-    }
-
-    #breadcrumbsList li::after {
-        margin-left: 6px;
     }
 }
 footer {
@@ -266,6 +219,53 @@ ul#footerCommitteeLinks {
         box-sizing: border-box;
     }
 }
+#breadcrumbs {
+    padding: 15px var(--outer_padding);
+    background-color: black;
+    opacity: 0.7;
+}
+
+#breadcrumbsList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#breadcrumbsList a {
+    color: rgb(187, 215, 216);
+}
+
+#breadcrumbsList a:hover {
+    color: white;
+}
+
+#breadcrumbsList li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+
+#breadcrumbsList li::after {
+    content: "\203A";
+    margin-left: 10px;
+}
+
+#breadcrumbsList li:last-child:after {
+    content: "";
+}
+
+@media only screen and (max-width: 900px) {
+    #breadcrumbsList li {
+        font-size: 1.0em;
+        margin-right: 6px;
+    }
+
+    #breadcrumbsList li::after {
+        margin-left: 6px;
+    }
+}
 .horizontalMenu {
     margin-top: 10px;
     color: white;
@@ -282,8 +282,17 @@ ul#footerCommitteeLinks {
     list-style-type: none;
     text-decoration: none;
     display: inline-block;
-    margin-right: 30px;
+    padding: 0 15px;
     font-size: 1.1em;
+    border-right: 1px solid rgba(151, 151, 151, 0.486);
+}
+
+.horizontalMenu li:first-of-type {
+    padding-left: 0;
+}
+
+.horizontalMenu li:last-of-type {
+    border-right: none;
 }
 
 .horizontalMenu a {
@@ -298,10 +307,26 @@ ul#footerCommitteeLinks {
 
 #headerNav {
     display: flex;
-
-    margin-left: 40px;
     margin-top: 0;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid rgba(151, 151, 151, 0.486);
+}
+
+#siteHeader.noBackgroundHeader #headerNav {
+    background-color: rgb(255, 255, 255);
+    border-top: none;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.486);
+}
+
+#siteHeader.noBackgroundHeader #headerNav a {
+    color: rgb(44, 42, 42);
+}
+
+#siteHeader #headerNav a {
+    color: rgba(255, 255, 255, 0.808);
 }
 
 #extraNav {
@@ -366,19 +391,18 @@ ul#footerCommitteeLinks {
 
 @media only screen and (max-width: 500px) {
     #headerNav {
-        min-width: 80%;
-        margin-left: 0;
-        margin-top: 10px;
+        display: none;
     }
 }
+#headerNavMobile {
+    align-self: stretch;
+    height: auto;
+    background-color: var(--theme-color-red);
+    display: none;
+}
 
-@media only screen and (max-width: 400px) {
-    #headerNav {
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-        min-width: 0;
-    }
+.hasBackgroundImage #headerNavMobile {
+    opacity: 0.7;
 }
 #homepageMain #featured {
     border-bottom: none;
@@ -395,14 +419,9 @@ ul#footerCommitteeLinks {
 }
 
 #homepageContent section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-bottom: none;
-}
-
-#homepageContent {
-    padding-left: 20px;
-    padding-right: 20px;
 }
 #sideIcons {
     display: flex;
@@ -454,6 +473,7 @@ ul#footerCommitteeLinks {
     top: 0;
     align-self: flex-start;
     margin-bottom: 100px;
+    margin-right: 20px;
 }
 
 #infoSidebar li {
@@ -516,9 +536,11 @@ ul#footerCommitteeLinks {
     display: flex;
     flex-flow: column;
     flex-grow: 1;
-    margin: 10px;
     color: var(--dark_grey);
-    margin: 10px;
+}
+
+a.pagePreview {
+    opacity: 1;
 }
 
 .pageThumbnailContainer {
@@ -531,6 +553,27 @@ ul#footerCommitteeLinks {
 .pageThumbnailContainer img {
     width: 100%;
     height: 100%;
+}
+
+.pagePreviewMeta {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.pagePreview summary {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+}
+
+summary .pagePreviewMeta .pagePreviewDate {
+    display: block;
+    font-size: 12px;
+}
+
+summary .pagePreviewMeta .pagePreviewAuthor {
+    color: var(--theme-color-green);
+    font-size: 1.2em;
 }
 #navSidebar {
     flex-grow: 1;
@@ -596,7 +639,7 @@ ul#footerCommitteeLinks {
     flex-basis: 155px;
     flex-grow: 0.1;
     flex-shrink: 0;
-    margin: 0 var(--outer_padding);
+    margin: 0 20px;
     position: sticky;
     top: 0;
     align-self: flex-start;
@@ -633,7 +676,7 @@ ul#footerCommitteeLinks {
     color: var(--white);
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 950px) {
     #postsSidebar {
         margin-left: 0;
         margin-right: 0;
@@ -657,39 +700,36 @@ ul#footerCommitteeLinks {
     #postsSidebar {
         flex-shrink: 1;
     }
-
 }
 #siteHeader {
     background-color: rgba(0,0,0,0.7);
-}
-
-#siteHeader .maxWidth {
-    display: flex;
-    flex-flow: column;
-    align-content: center;
-    padding: 20px var(--outer_padding) 15px var(--outer_padding);
-
 }
 
 #siteHeader.noBackgroundHeader {
     background-color: black;
 }
 
-#headerContainer {
+#mainHeaderContainer {
     flex-wrap: wrap;
 }
 
-/*sets height of logo*/
+
 #siteHeader h1 {
     display: flex;
     align-items: center;
-    height: 30px;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
+/*sets height of logo*/
 #siteHeader h1 a {
     height: 100%;
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 30px;
 }
 
 .custom-logo {
@@ -702,31 +742,59 @@ ul#footerCommitteeLinks {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-right: auto;
-}
-
-#topBar h1 {
-    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 #topBar h2 {
     display: none;
 }
 
+#rightButtons {
+    display: flex;
+    align-self: stretch;
+}
+
+.fullHeightButton {
+    border-radius: 0;
+    height: 100%;
+    margin: 0;
+    border-left: 1px solid rgba(151, 151, 151, 0.486);
+    border-right: 1px solid rgba(151, 151, 151, 0.486);
+}
+
+#contactButton {
+    background-color: var(--theme-color-red);
+}
+
+#subscribeButton {
+    background-color: var(--theme-color-blue);
+    border-right: none;
+}
+
+
 @media only screen and (max-width: 500px) {
     #headerContainer {
         padding-bottom: 10px;
+    }
+
+    #rightButtons {
+        display: none;
+    }
+
+    #siteHeader #headerNavMobile {
+        display: block;
     }
 }
 
 @media only screen and (max-width: 400px) {
     #topBar {
-        width: 100%;
+        flex-wrap: nowrap;
     }
 
     #topBar h1 {
-        width: 100%;
-        height: auto;
+        flex-shrink: 1;
+        margin-right: 10px;
     }
 
     .custom-logo {
@@ -735,12 +803,13 @@ ul#footerCommitteeLinks {
     }
 
     #siteHeader h1 a {
-        width: 100%;
+        width: auto;
         height: auto;
         display: flex;
         align-items: center;
     }
 }
+
 #header-widget-container {
     --subscription_font_size: 0.9em; 
     --subscription_form_height: 27px;
@@ -803,60 +872,104 @@ ul#footerCommitteeLinks {
 }
 
 
-#homepageContent #latestPosts {
+#homepageContent {
     padding-top: 10px;
 }
 
-#bigPosts {
-    display: flex;
-    flex-flow: row;
+#homepageContent #latestPosts {
+    padding-top: 0;
 }
+
+/*Main Article*/
 
 #firstBigPost {
     flex-grow: 0;
     flex-shrink: 0;
-    display: flex;
     flex-flow: row;
     flex-basis: 50%;
 }
 
 #firstBigPost .pageThumbnailContainer {
     height: 100%;
-    margin: 10px;
+    margin-left: 10px;
 }
 
 #firstBigPost .pagePreview {
     flex-flow: row-reverse;
-    margin: 20px 0;
 }
 
-#firstBigPost span {
-    font-size: 1.2em;
+#firstBigPost summary span {
+    font-size: 1.1em;
+}
+
+#firstBigPost .pagePreviewMeta {
+    font-size: 14px;
+}
+
+#firstBigPost .pagePreviewMeta .pagePreviewAuthor{
+    font-size: 20px;
 }
 
 #firstBigPost .pagePreview summary {
     max-width: 50%;
     box-sizing: border-box;
-    padding: 10px;
+    padding-right: 20px;
 }
 
 #homepageContent #firstBigPost .pagePreview h3 {
     font-size: 2em;
     margin: 10px 0 20px 0;
+    color: var(--theme-color-blue);
 }
 
-#importantPosts {
+#asidePosts {
+    margin-top: 20px;
+}
+
+/*End Main Article*/
+
+#mediumPosts > div {
+    flex-basis: 50%;
+}
+
+#secondRow {
     flex-basis: 300px;
     flex-grow: 1;
-    display: flex;
     flex-flow: row;
     justify-content: space-between;
-    margin-top: 10px;
-    
+    border-top: 1px solid var(--very_light_grey);
+    padding-top: 10px;
 }
 
-#importantPosts .pagePreview {
+#firstRow {
+    padding-bottom: 10px;
+}
+
+#secondRow .pagePreview {
     max-width: 450px;
+    border-right: 1px solid var(--very_light_grey);
+}
+
+#secondRow .pagePreview:last-of-type {
+    border-right: none;
+}
+
+
+#firstRowTextPosts {
+    box-sizing: border-box;
+    border-left: 1px solid var(--very_light_grey);
+}
+
+#firstRowTextPosts .pagePreview {
+    flex-basis: 0;
+}
+
+#firstRowTextPosts .pagePreview:first-of-type {
+    border-bottom: 1px solid var(--very_light_grey);
+}
+
+#homepageContent #firstRowTextPosts .pagePreview h3 {
+    margin-top: 0;
 }
 
 #secondNewsSection {
@@ -866,7 +979,10 @@ ul#footerCommitteeLinks {
 
 #mediumPosts {
     display: flex;
-    margin-top: 20px;
+}
+
+#mediumPosts {
+    border-left: 1px solid var(--very_light_grey);
 }
 
 #moreMediumNews .pagePreview {
@@ -902,16 +1018,17 @@ ul#footerCommitteeLinks {
 
 #homepageContent .pagePreview h3 {
     font-size: 1.3em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 
 @media only screen and (max-width: 1200px) {
-    #bigPosts {
+    #firstRow {
         flex-wrap: wrap;
     }
     
-    #bigPosts #firstBigPost {
+    #firstRow #firstBigPost {
         flex-basis: 100%;
         flex-grow: 2;
         flex-shrink: 0;
@@ -922,17 +1039,44 @@ ul#footerCommitteeLinks {
         max-width: 10000px;
         margin-bottom: 40px;
     }
+
+    #mediumPosts {
+        border-left: none;
+    }
 }
 
 @media only screen and (max-width: 850px) {
-    #importantPosts, #moreMediumNews {
+    #mediumPosts {
         flex-wrap: wrap;
     }
 
-    #importantPosts .pagePreview, #moreMediumNews .pagePreview {
+    #mediumPosts > div {
+        flex-basis: 100%;
+        flex-shrink: 0;
+    }
+
+    #mediumPosts #firstRowTextPosts {
+        flex-basis: 100%;
+        flex-shrink: 0;
+        flex-direction: row;
+        border-left: none;
+        border-top: 1px solid var(--very_light_grey);
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    #secondRow, #moreMediumNews {
+        flex-wrap: wrap;
+    }
+
+    #secondRow .pagePreview, #moreMediumNews .pagePreview {
         flex-shrink: 0;
         flex-grow: 1;
         max-width: 1000px;
+    }
+
+    #secondRow .pagePreview {
+        border-right: none;
     }
 }
 
@@ -943,6 +1087,11 @@ ul#footerCommitteeLinks {
 
     .pagePreview {
         margin-bottom: 25px;
+    }
+
+    #firstBigPost {
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     #mediumPosts {
@@ -959,7 +1108,7 @@ ul#footerCommitteeLinks {
         box-sizing: border-box;
     }
 
-    #importantPosts {
+    #secondRow {
         margin-left: -10px;
         margin-right: -10px;
     }
@@ -976,28 +1125,38 @@ ul#footerCommitteeLinks {
 
     #firstBigPost .pagePreview summary {
         max-width: 100%;
-        padding: 0;
         margin-top: 10px;
     }
 
     #firstBigPost .pageThumbnailContainer {
         margin: 0;
     }
+
+    #firstRowTextPosts {
+        flex-flow: column;
+        flex-wrap: wrap;
+    }
 }
 
 @media only screen and (max-width: 400px) {
+    /*images become full width*/
+
     #firstBigPost .pagePreview {
-        margin-top: 0;
+        padding-top: 0;
     }
 
     #homepageContent #latestPosts {
         padding-top: 0;
     }
 
-    .pagePreview .pageThumbnailContainer {
-        margin-left: -20px !important;
-        margin-right: -20px !important;
-        width: calc(100% + 40px);
+    #homepageContent .pagePreview .pageThumbnailContainer {
+        margin-left: calc(var(--outer_padding)-2*var(--outer_padding)) !important;
+        margin-right: calc(var(--outer_padding)-2*var(--outer_padding)) !important;
+        width: 100vw;
+    }
+
+    #homepageContent {
+        padding-top: 0;
     }
 }
 

@@ -8,7 +8,7 @@
 }
 
 .bodyHeader {
-    padding: var(--outer_padding);
+    padding: 20px 20px 20px var(--outer_padding);
     background-color: white;
     color: black;
 }
@@ -20,7 +20,7 @@
 }
 
 .bodyHeader.hasBackgroundImage {
-    margin: 15% 20px 15% 0;
+    margin: 15% var(--outer_padding) 15% 0;
     max-width: 500px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;

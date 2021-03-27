@@ -4,7 +4,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: var(--main-top-padding);
-    max-width: 1400px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #postContent {
@@ -14,7 +16,7 @@
     max-width: 600px;
     overflow: hidden;
     color: rgb(34, 34, 34);
-    padding: var(--main-top-padding) 40px 20px 0px;
+    padding: var(--main-top-padding) 40px 20px 40px;
     margin-top: calc(var(--main-top-padding) - 2*var(--main-top-padding));
 }
 
@@ -92,12 +94,6 @@
 
 }
 
-@media only screen and (max-width: 800px) {
-    #postContent p {
-        font-size: 0.95em;
-    }
-}
-
 @media only screen and (max-width: 720px) {
     #postContent {
         padding-left: 0;
@@ -108,12 +104,6 @@
         margin-left: 0;
         margin-right: 0;
         width: 100%;
-    }
-
-    #postContent p {
-        padding-left: 0px;
-        padding-right: 0px;
-        font-size: 0.9em;
     }
 
     #postContent h1, #postContent h2, #postContent h3, #postContent h4, #postContent h5, #postContent h6 {

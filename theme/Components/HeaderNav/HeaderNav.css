@@ -14,8 +14,17 @@
     list-style-type: none;
     text-decoration: none;
     display: inline-block;
-    margin-right: 30px;
+    padding: 0 15px;
     font-size: 1.1em;
+    border-right: 1px solid rgba(151, 151, 151, 0.486);
+}
+
+.horizontalMenu li:first-of-type {
+    padding-left: 0;
+}
+
+.horizontalMenu li:last-of-type {
+    border-right: none;
 }
 
 .horizontalMenu a {
@@ -30,10 +39,26 @@
 
 #headerNav {
     display: flex;
-
-    margin-left: 40px;
     margin-top: 0;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid rgba(151, 151, 151, 0.486);
+}
+
+#siteHeader.noBackgroundHeader #headerNav {
+    background-color: rgb(255, 255, 255);
+    border-top: none;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.486);
+}
+
+#siteHeader.noBackgroundHeader #headerNav a {
+    color: rgb(44, 42, 42);
+}
+
+#siteHeader #headerNav a {
+    color: rgba(255, 255, 255, 0.808);
 }
 
 #extraNav {
@@ -98,17 +123,6 @@
 
 @media only screen and (max-width: 500px) {
     #headerNav {
-        min-width: 80%;
-        margin-left: 0;
-        margin-top: 10px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    #headerNav {
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-        min-width: 0;
+        display: none;
     }
 }

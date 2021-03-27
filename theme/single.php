@@ -16,7 +16,7 @@ get_header()
             ?>
             <div id='mainArea'>
                 <div class='outer'>
-                <div id='postMain' class='outer'>
+                <div id='postMain'>
                     <aside id='infoSidebar'>
                         <?= InfoSidebar() ?>
                     </aside>

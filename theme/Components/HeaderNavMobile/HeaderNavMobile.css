@@ -1,0 +1,10 @@
+#headerNavMobile {
+    align-self: stretch;
+    height: auto;
+    background-color: var(--theme-color-red);
+    display: none;
+}
+
+.hasBackgroundImage #headerNavMobile {
+    opacity: 0.7;
+}

@@ -11,9 +11,11 @@
     display: flex;
     flex-flow: column;
     flex-grow: 1;
-    margin: 10px;
     color: var(--dark_grey);
-    margin: 10px;
+}
+
+a.pagePreview {
+    opacity: 1;
 }
 
 .pageThumbnailContainer {
@@ -26,4 +28,25 @@
 .pageThumbnailContainer img {
     width: 100%;
     height: 100%;
+}
+
+.pagePreviewMeta {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.pagePreview summary {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+}
+
+summary .pagePreviewMeta .pagePreviewDate {
+    display: block;
+    font-size: 12px;
+}
+
+summary .pagePreviewMeta .pagePreviewAuthor {
+    color: var(--theme-color-green);
+    font-size: 1.2em;
 }

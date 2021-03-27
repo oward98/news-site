@@ -8,12 +8,17 @@ html {
     --mid_grey: #8f8f8f;
     --dark_grey: rgb(62, 62, 63);
     --very_dark_grey: #131613;
-    --radius: 2px;
+    --radius: 1px;
     --font: 'Times';
-    --outer_padding: 20px;
+    --outer_padding: 70px;
     background-color: black;
     font-size: 18px;
     font-family: var(--font);
+
+    --theme-color-red: rgb(68, 11, 0);
+    --theme-color-blue: rgb(0, 86, 99);
+    --theme-color-green: rgb(40, 71, 0);
+    --theme-color-orange: rgb(116, 70, 1);
 }
 
 body {
@@ -112,7 +117,40 @@ strong {
     padding-right: 35px;
 }
 
-@media only screen and (max-width: 380px) {
+button {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    letter-spacing: 0.5px;
+    font-family: 'Georgia';
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover, button:focus {
+    opacity: 1;
+    background: var(--theme-color-red);
+
+}
+
+@media only screen and (max-width: 900px) {
+    html {
+        --outer_padding: 7%; 
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        --outer_padding: 4%; 
+    }
+}
+
+@media only screen and (max-width: 400px) {
     html {
         --outer_padding: 12px; 
     }

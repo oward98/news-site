@@ -1,57 +1,101 @@
-#homepageContent #latestPosts {
+#homepageContent {
     padding-top: 10px;
 }
 
-#bigPosts {
-    display: flex;
-    flex-flow: row;
+#homepageContent #latestPosts {
+    padding-top: 0;
 }
+
+/*Main Article*/
 
 #firstBigPost {
     flex-grow: 0;
     flex-shrink: 0;
-    display: flex;
     flex-flow: row;
     flex-basis: 50%;
 }
 
 #firstBigPost .pageThumbnailContainer {
     height: 100%;
-    margin: 10px;
+    margin-left: 10px;
 }
 
 #firstBigPost .pagePreview {
     flex-flow: row-reverse;
-    margin: 20px 0;
 }
 
-#firstBigPost span {
-    font-size: 1.2em;
+#firstBigPost summary span {
+    font-size: 1.1em;
+}
+
+#firstBigPost .pagePreviewMeta {
+    font-size: 14px;
+}
+
+#firstBigPost .pagePreviewMeta .pagePreviewAuthor{
+    font-size: 20px;
 }
 
 #firstBigPost .pagePreview summary {
     max-width: 50%;
     box-sizing: border-box;
-    padding: 10px;
+    padding-right: 20px;
 }
 
 #homepageContent #firstBigPost .pagePreview h3 {
     font-size: 2em;
     margin: 10px 0 20px 0;
+    color: var(--theme-color-blue);
 }
 
-#importantPosts {
+#asidePosts {
+    margin-top: 20px;
+}
+
+/*End Main Article*/
+
+#mediumPosts > div {
+    flex-basis: 50%;
+}
+
+#secondRow {
     flex-basis: 300px;
     flex-grow: 1;
-    display: flex;
     flex-flow: row;
     justify-content: space-between;
-    margin-top: 10px;
-    
+    border-top: 1px solid var(--very_light_grey);
+    padding-top: 10px;
 }
 
-#importantPosts .pagePreview {
+#firstRow {
+    padding-bottom: 10px;
+}
+
+#secondRow .pagePreview {
     max-width: 450px;
+    border-right: 1px solid var(--very_light_grey);
+}
+
+#secondRow .pagePreview:last-of-type {
+    border-right: none;
+}
+
+
+#firstRowTextPosts {
+    box-sizing: border-box;
+    border-left: 1px solid var(--very_light_grey);
+}
+
+#firstRowTextPosts .pagePreview {
+    flex-basis: 0;
+}
+
+#firstRowTextPosts .pagePreview:first-of-type {
+    border-bottom: 1px solid var(--very_light_grey);
+}
+
+#homepageContent #firstRowTextPosts .pagePreview h3 {
+    margin-top: 0;
 }
 
 #secondNewsSection {
@@ -61,7 +105,10 @@
 
 #mediumPosts {
     display: flex;
-    margin-top: 20px;
+}
+
+#mediumPosts {
+    border-left: 1px solid var(--very_light_grey);
 }
 
 #moreMediumNews .pagePreview {
@@ -97,16 +144,17 @@
 
 #homepageContent .pagePreview h3 {
     font-size: 1.3em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 
 @media only screen and (max-width: 1200px) {
-    #bigPosts {
+    #firstRow {
         flex-wrap: wrap;
     }
     
-    #bigPosts #firstBigPost {
+    #firstRow #firstBigPost {
         flex-basis: 100%;
         flex-grow: 2;
         flex-shrink: 0;
@@ -117,17 +165,44 @@
         max-width: 10000px;
         margin-bottom: 40px;
     }
+
+    #mediumPosts {
+        border-left: none;
+    }
 }
 
 @media only screen and (max-width: 850px) {
-    #importantPosts, #moreMediumNews {
+    #mediumPosts {
         flex-wrap: wrap;
     }
 
-    #importantPosts .pagePreview, #moreMediumNews .pagePreview {
+    #mediumPosts > div {
+        flex-basis: 100%;
+        flex-shrink: 0;
+    }
+
+    #mediumPosts #firstRowTextPosts {
+        flex-basis: 100%;
+        flex-shrink: 0;
+        flex-direction: row;
+        border-left: none;
+        border-top: 1px solid var(--very_light_grey);
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    #secondRow, #moreMediumNews {
+        flex-wrap: wrap;
+    }
+
+    #secondRow .pagePreview, #moreMediumNews .pagePreview {
         flex-shrink: 0;
         flex-grow: 1;
         max-width: 1000px;
+    }
+
+    #secondRow .pagePreview {
+        border-right: none;
     }
 }
 
@@ -138,6 +213,11 @@
 
     .pagePreview {
         margin-bottom: 25px;
+    }
+
+    #firstBigPost {
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     #mediumPosts {
@@ -154,7 +234,7 @@
         box-sizing: border-box;
     }
 
-    #importantPosts {
+    #secondRow {
         margin-left: -10px;
         margin-right: -10px;
     }
@@ -171,28 +251,38 @@
 
     #firstBigPost .pagePreview summary {
         max-width: 100%;
-        padding: 0;
         margin-top: 10px;
     }
 
     #firstBigPost .pageThumbnailContainer {
         margin: 0;
     }
+
+    #firstRowTextPosts {
+        flex-flow: column;
+        flex-wrap: wrap;
+    }
 }
 
 @media only screen and (max-width: 400px) {
+    /*images become full width*/
+
     #firstBigPost .pagePreview {
-        margin-top: 0;
+        padding-top: 0;
     }
 
     #homepageContent #latestPosts {
         padding-top: 0;
     }
 
-    .pagePreview .pageThumbnailContainer {
-        margin-left: -20px !important;
-        margin-right: -20px !important;
-        width: calc(100% + 40px);
+    #homepageContent .pagePreview .pageThumbnailContainer {
+        margin-left: calc(var(--outer_padding)-2*var(--outer_padding)) !important;
+        margin-right: calc(var(--outer_padding)-2*var(--outer_padding)) !important;
+        width: 100vw;
+    }
+
+    #homepageContent {
+        padding-top: 0;
     }
 }
 

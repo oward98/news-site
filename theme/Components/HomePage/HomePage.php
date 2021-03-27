@@ -24,7 +24,6 @@ function HomePage() {
                 </section>
                 <div class='lineDiv'></div>
                 <div class='lineDiv'></div>
-                <div class='lineDiv'></div>
                 <section>
                     <?php MediumNews() ?>
                 </section>

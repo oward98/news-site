@@ -3,38 +3,42 @@
 require get_template_directory() . '/utils/makeThumbnail.php';
 
 function BigNews() {
-    $post_args = array('meta_key' => 'importance_key', 'meta_value' => 'big');
-    $big_news_posts = get_posts($post_args);
-    $first_post = array_shift($big_news_posts);
+    $big_news_args = array('meta_key' => 'importance_key', 'meta_value' => 'big');
+    $big_news_posts = get_posts($big_news_args);
+
+    $medium_news_args = array('meta_key' => 'importance_key', 'meta_value' => 'medium');
+    $medium_news_posts = get_posts($medium_news_args);
+
     ?>
     <div id='topPostsBar'>
-        <div id='bigPosts'>
-            <div id='firstBigPost'>
+        <div id='firstRow' class='flex row'>
+            <div id='firstBigPost' class='flex'>
                 <?php
-                makeThumbnail($first_post, 'medium');
+                makeThumbnail(array_shift($big_news_posts), 'big');
                 ?>
             </div>
             <div id='asidePosts'>
                 <div id='mediumPosts'>
                     <?php
-                    $post_args = array('meta_key' => 'importance_key', 'meta_value' => 'medium');
-                    $medium_news_posts = get_posts($post_args);
-                    makeThumbnail(array_shift($medium_news_posts), 'medium');
                     makeThumbnail(array_shift($medium_news_posts), 'medium');
                     ?>
-                </div>
-                <div id='littlePosts'>
+                    <div id ='firstRowTextPosts' class='flex column'>
+                        <?php
+                        makeThumbnail(array_shift($medium_news_posts), 'small');
+                        makeThumbnail(array_shift($medium_news_posts), 'small');
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id='importantPosts'>
-                <?php
-                makeThumbnail(array_shift($big_news_posts), 'medium');
-                makeThumbnail(array_shift($big_news_posts), 'medium');
-                makeThumbnail(array_shift($big_news_posts), 'medium');
-                makeThumbnail(array_shift($big_news_posts), 'medium');
-                ?>
-            </div>
+        <div id='secondRow' class='flex'>
+            <?php
+            makeThumbnail(array_shift($big_news_posts), 'medium');
+            makeThumbnail(array_shift($big_news_posts), 'medium');
+            makeThumbnail(array_shift($big_news_posts), 'medium');
+            makeThumbnail(array_shift($big_news_posts), 'medium');
+            ?>
+        </div>
     </div>
     <?php
 }

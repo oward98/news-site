@@ -13,6 +13,7 @@ require 'functionsHelpers/declareSupport.php';
 //meta tags set up
 require 'metaSetup/neighbourhoods.php';
 require 'metaSetup/importance.php';
+require 'metaSetup/author.php';
 
 //format jetpack subscribe input
 require 'functionsHelpers/formatInput.php';

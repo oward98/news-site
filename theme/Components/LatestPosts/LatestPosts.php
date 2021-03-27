@@ -14,7 +14,7 @@ function LatestPosts($numOfPosts) {
         $thumbnail = get_the_post_thumbnail($ID, 'large');
 
         ?>
-        <a href=<?=$permalink?> class='pagePreview'>
+        <a href=<?=$permalink?> class='pagePreview smallMargin flex column'>
             <div class='pageThumbnailContainer'>
                 <?=$thumbnail?>
             </div>
