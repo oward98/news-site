@@ -452,7 +452,7 @@ mark.lowSignificance {
     margin-left: -8px;
 }
 #afterArticle {
-    margin-top: 70px;
+    margin-top: 40px;
 }
 #afterArticle h2 {
     margin-bottom: 0;
@@ -589,6 +589,46 @@ mark.lowSignificance {
     height: 100%;
     width: 100%;
     filter: brightness(80%);
+}
+#breadcrumbs {
+    padding: 15px var(--outer_padding);
+    background-color: black;
+    opacity: 0.7;
+}
+#breadcrumbsList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+#breadcrumbsList a {
+    color: rgb(187, 215, 216);
+}
+#breadcrumbsList a:hover {
+    color: white;
+}
+#breadcrumbsList li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+#breadcrumbsList li::after {
+    content: "\203A";
+    margin-left: 10px;
+}
+#breadcrumbsList li:last-child:after {
+    content: "";
+}
+@media only screen and (max-width: 900px) {
+    #breadcrumbsList li {
+        font-size: 1.0em;
+        margin-right: 6px;
+    }
+
+    #breadcrumbsList li::after {
+        margin-left: 6px;
+    }
 }
 .bodyTitle {
     margin: 0 0 10px 0;
@@ -775,46 +815,6 @@ ul#footerCommitteeLinks {
         padding-left: 10px;
         padding-right: 10px;
         box-sizing: border-box;
-    }
-}
-#breadcrumbs {
-    padding: 15px var(--outer_padding);
-    background-color: black;
-    opacity: 0.7;
-}
-#breadcrumbsList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    color: white;
-}
-#breadcrumbsList a {
-    color: rgb(187, 215, 216);
-}
-#breadcrumbsList a:hover {
-    color: white;
-}
-#breadcrumbsList li {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 1.1em;
-    white-space: nowrap;
-}
-#breadcrumbsList li::after {
-    content: "\203A";
-    margin-left: 10px;
-}
-#breadcrumbsList li:last-child:after {
-    content: "";
-}
-@media only screen and (max-width: 900px) {
-    #breadcrumbsList li {
-        font-size: 1.0em;
-        margin-right: 6px;
-    }
-
-    #breadcrumbsList li::after {
-        margin-left: 6px;
     }
 }
 .horizontalMenu {
@@ -1025,6 +1025,13 @@ ul#footerCommitteeLinks {
 #infoSidebar h1 {
     margin: 0;
 }
+#infoSidebar #author {
+    border-top: none;
+}
+#infoSidebar #author h1 {
+    font-size: 25px;
+    color: var(--theme-color-blue);
+}
 @media only screen and (max-width: 1200px) {
     #infoSidebar {
         display: none;
@@ -1179,6 +1186,25 @@ summary .pagePreviewMeta .pagePreviewAuthor {
     #postsSidebar {
         flex-shrink: 1;
     }
+}
+.svg {
+    height: 15px;
+    width: 15px;
+}
+.shareButton {
+    display: inline-flex;
+    margin-right: auto;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid var(--very_light_grey);
+    border-radius: 2px;
+    padding: 4px 6px;
+    cursor: pointer;
+    color: black;
+    margin-bottom: 4px;
+}
+.shareButton img {
+    margin-right: 6px;
 }
 #siteHeader {
     background-color: rgba(0,0,0,0.7);

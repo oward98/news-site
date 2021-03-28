@@ -52,6 +52,15 @@
     margin: 0;
 }
 
+#infoSidebar #author {
+    border-top: none;
+}
+
+#infoSidebar #author h1 {
+    font-size: 25px;
+    color: var(--theme-color-blue);
+}
+
 @media only screen and (max-width: 1200px) {
     #infoSidebar {
         display: none;

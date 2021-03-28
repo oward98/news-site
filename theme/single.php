@@ -24,6 +24,13 @@ get_header()
                         <article>
                             <?=the_content()?>
                         </article>
+                        <div class='comments'>
+                            <?php
+                            if ( comments_open() || get_comments_number() ) :
+                                comments_template();
+                            endif;
+                            ?>
+                        </div>
                     </main>
                     <?= PostsSidebar(4) ?>
                 </div>

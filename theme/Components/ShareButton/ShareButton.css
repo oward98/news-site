@@ -1,0 +1,21 @@
+.svg {
+    height: 15px;
+    width: 15px;
+}
+
+.shareButton {
+    display: inline-flex;
+    margin-right: auto;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid var(--very_light_grey);
+    border-radius: 2px;
+    padding: 4px 6px;
+    cursor: pointer;
+    color: black;
+    margin-bottom: 4px;
+}
+
+.shareButton img {
+    margin-right: 6px;
+}

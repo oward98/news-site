@@ -1,5 +1,7 @@
 <?php
 
+require getComponentPath('ShareButton');
+
 function InfoSidebar() {
     $neighbourhoods = array (
         'bloomsbury',
@@ -31,15 +33,19 @@ function InfoSidebar() {
         }
     };
 
+    $author = get_post_meta( $post_id, 'author', true );
+
     ?>
     <ul>
-        <li><?=get_the_date()?>
+        <?php if ($author) {echo "<li id='author'><h1>$author</li>"; } ?>
+        <li><?=get_the_date()?></li>
         <li>
             <h1>Neighbourhoods</h1>
             <ul>
                 <?php foreach($neighbourhoodsAffected as $neighbourhood) echo "<li>$neighbourhood</li>" ?>
             </ul>
         </li>
+        <li id='shareButtons'><?=TwitterButton()?> <?=FacebookButton()?> <?=EmailButton()?></li>
     </ul>
     <?php
 }

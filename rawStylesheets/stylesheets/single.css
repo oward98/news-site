@@ -48,7 +48,7 @@
 }
 
 #afterArticle {
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 #afterArticle h2 {
@@ -78,6 +78,7 @@
     margin-left: -10px;
     margin-right: -10px;
 }
+
 
 @media only screen and (max-width: 1200px) {
     #postContent {
