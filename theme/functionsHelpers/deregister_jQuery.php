@@ -7,4 +7,4 @@ function deregister_jQuery() {
     }
 }
 
-add_action('init', 'deregister_jQuery');
+//add_action('init', 'deregister_jQuery');
